@@ -9,9 +9,9 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'mdi:home-outline'
     },
     {
-      title: 'Second Page',
-      path: '/second-page',
-      icon: 'mdi:email-outline'
+      title: 'Dashboard',
+      path: '/dashboard',
+      icon: 'mdi:home-outline'
     },
     {
       path: '/acl',
@@ -21,11 +21,18 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'mdi:shield-outline'
     },
     {
-      path: '/login',
-      action: 'read',
-      subject: 'login',
-      title: 'Access Control',
-      icon: 'mdi:shield-outline'
+      title: 'Users',
+      icon: 'mdi:account-outline',
+      children: [
+        {
+          title: 'List',
+          path: '/users/list'
+        },
+        {
+          title: 'Add',
+          path: '/users/add'
+        }
+      ]
     }
   ]
 }
