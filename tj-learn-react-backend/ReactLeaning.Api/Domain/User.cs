@@ -29,6 +29,7 @@ namespace ReactLeaning.Api.Domain
              
             Property(x => x.Username);
             Property(x => x.Name); 
+            Property(x => x.PhoneNo); 
             Property(x => x.Password);
             Property(x => x.IsActive); 
             Property(x => x.CreateDate);

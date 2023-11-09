@@ -39,14 +39,14 @@ namespace ReactLeaning.Api.Handlers.Users
 
         public Task<IEnumerable<QueryUsersResponse>> Handle(QueryUsersRequest request, CancellationToken cancellationToken)
         {
-            var usersQuery = _session.Query<User>();
+            var usersQuery = _session.QueryOver<User>();
 
             if (!string.IsNullOrEmpty(request.Username))
             {
                 usersQuery = usersQuery.Where(x => x.Username.IsLike(request.Username, MatchMode.Anywhere));
             }
 
-            var users = usersQuery.ToList();
+            var users = usersQuery.List();
 
             var response = users.Select(x => new QueryUsersResponse
             {
