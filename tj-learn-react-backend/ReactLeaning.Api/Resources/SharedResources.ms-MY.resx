@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string"/>
+                            <xsd:attribute name="type" type="xsd:string"/>
+                            <xsd:attribute name="mimetype" type="xsd:string"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string"/>
+                            <xsd:attribute name="name" type="xsd:string"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="PleaseInputPhoneNo" xml:space="preserve">
+    <value>Sila Masukkan Nombor Mudah Alih</value>
+  </data>
+	<data name="PleaseInputUniqueKey" xml:space="preserve">
+    <value>Sila Masukkan Nombor Receipt</value>
+  </data>
+	<data name="InvalidUniqueKey" xml:space="preserve">
+    <value>Nombor Receipt tidak boleh guna</value>
+  </data>
+	<data name="NotAbleToVoidDueToHours" xml:space="preserve">
+    <value>Not able to void this attendance due to date overdue</value>
+  </data>
+    <data name="InvalidPhoneNoOrPassword" xml:space="preserve">
+    <value>Nombor Mudah Alih Atau Kata Laluan Tidak Sah</value>
+  </data>
+	<data name="InvalidPhoneNoOrOtp" xml:space="preserve">
+    <value>Nombor Mudah Alih Atau OTP Tidak Sah</value>
+  </data>
+    <data name="InvalidLoginCountExceeded" xml:space="preserve">
+    <value>Kiraan Log Masuk Tidak Sah Melebihi</value>
+  </data>
+    <data name="InvalidPermission" xml:space="preserve">
+    <value>Kebenaran Tidak Sah</value>
+  </data>
+    <data name="PleaseInputPassword" xml:space="preserve">
+    <value>Sila Masukkan Kata Laluan</value>
+  </data>
+	<data name="PleaseInputOldPassword" xml:space="preserve">
+    <value>Sila masukkan kata laluan yang lama</value>
+  </data>
+	<data name="OldPasswordInvalid" xml:space="preserve">
+    <value>Kata laluan lama tidak sah</value>
+  </data>
+    <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Nama pengguna atau kata laluan tidak sah</value>
+  </data>
+    <data name="PleaseInputBranchCode" xml:space="preserve">
+    <value>Sila Input Kod Cawangan</value>
+  </data>
+	<data name="PleaseInputMerchantType" xml:space="preserve">
+    <value>Sila masukan merchant type</value>
+  </data>
+	<data name="PleaseInputBranch" xml:space="preserve">
+    <value>Sila masukan branch</value>
+  </data>
+	<data name="PleaseInputUsername" xml:space="preserve">
+    <value>Sila masukan username</value>
+  </data>
+	<data name="UsernameExists" xml:space="preserve">
+    <value>Username tidak sah, sila gula username lain</value>
+  </data>
+	<data name="InvalidOperation" xml:space="preserve">
+    <value>Operasi tidak sah</value>
+  </data>
+    <data name="InvalidBranchCode" xml:space="preserve">
+    <value>Kod Cawangan Tidak Sah</value>
+  </data>
+	<data name="InvalidCode" xml:space="preserve">
+    <value>Kod tidak sah</value>
+  </data>
+    <data name="InvalidMerchantId" xml:space="preserve">
+    <value>MerchantId tidak sah</value>
+  </data>
+    <data name="UserIsNotMember" xml:space="preserve">
+    <value>Pengguna belum menyertai ahli</value>
+  </data>
+    <data name="InvalidBranchId" xml:space="preserve">
+    <value>Cawangan Id tidak sah</value>
+  </data>
+	<data name="PasswordAndConfirmPasswordMustMatch" xml:space="preserve">
+    <value>Kata Laluan tidak sah</value>
+  </data>
+    <data name="AmountGreaterThan0" xml:space="preserve">
+    <value>Amaun Harus Lebih Daripada 0</value>
+  </data>
+    <data name="BalanceInsufficient" xml:space="preserve">
+    <value>Baki Tidak Mencukupi</value>
+  </data>
+	<data name="LoginOtp" xml:space="preserve">
+		<value>Daftar Masuk! OTP anda adalah {0} . </value>
+	</data>
+    <data name="MaximumCharacterLength30" xml:space="preserve">
+    <value>Panjang Aksara Maksimum ialah 30</value>
+  </data>
+    <data name="PhoneNumberWasTaken" xml:space="preserve">
+    <value>Nombor Mudah Alih Telah Didaftarkan</value>
+  </data>
+    <data name="PleaseInputName" xml:space="preserve">
+    <value>Sila Masukkan Nama</value>
+  </data>
+	<data name="PleaseInputPassport" xml:space="preserve">
+    <value>Sila Masukkan Passport</value>
+  </data>
+    <data name="MaximumCharacterLength50" xml:space="preserve">
+    <value>Panjang Aksara Maksimum ialah 50</value>
+  </data>
+    <data name="PleaseRequestLater" xml:space="preserve">
+    <value>Sila Minta Kemudian</value>
+  </data>
+	<data name="InvalidPhoneNo" xml:space="preserve">
+    <value>Nombor Telefon tidak sah</value>
+  </data>
+    <data name="UserAlreadyVerified" xml:space="preserve">
+    <value>Pengguna Sudah Disahkan</value>
+  </data>
+    <data name="InvalidOtp" xml:space="preserve">
+    <value>OTP tidak sah</value>
+  </data>
+    <data name="OtpSmsNew" xml:space="preserve">
+        <value>Selamat Datang Ke UNI. OTP anda adalah {0}.</value>
+    </data>
+    <data name="InvalidPaymentId" xml:space="preserve">
+        <value>Id Pembayaran Tidak Sah</value>
+    </data>
+	<data name="InvalidTopUpId" xml:space="preserve">
+        <value>Id Tambah Nilai Tidak Sah</value>
+    </data>
+    <data name="PaymentIsVoided" xml:space="preserve">
+        <value>Bayaran telah dibatalkan</value>
+    </data>
+	<data name="TopUpIsVoided" xml:space="preserve">
+        <value>Record tambah nilai telah dibatalkan</value>
+    </data>
+	<data name="AfterVoidShouldNotBalanceZero" xml:space="preserve">
+        <value>Baki tidak mengcukupi selepas bayaran dibatalkan</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreatePackage" xml:space="preserve">
+        <value>Hanya Pengurus Cawangan Boleh Membuat Pakej</value>
+    </data>
+	<data name="OnlyBranchManagerCanResetPassword" xml:space="preserve">
+        <value>Hanya Pengurus Cawangan boleh menukar password</value>
+    </data>
+	<data name="OnlyAbleToResetSameMerchantUser" xml:space="preserve">
+        <value>Tidak Sah</value>
+    </data>
+    <data name="PleaseInputPackageName" xml:space="preserve">
+        <value>Sila Masukkan Nama Pakej</value>
+    </data>
+    <data name="QuantityGreaterThan1" xml:space="preserve">
+        <value>Kuantiti Mesti Lebih Daripada 1</value>
+    </data>
+    <data name="VoucherPriceGreaterThan0" xml:space="preserve">
+        <value>Harga Baucar #{0} Mesti Lebih Daripada 0</value>
+    </data>
+    <data name="PriceGreaterThan0" xml:space="preserve">
+        <value>Harga Harus Lebih Daripada 0</value>
+    </data>
+    <data name="InvalidPackageId" xml:space="preserve">
+        <value>Pakej Id tidak sah</value>
+    </data>
+    <data name="UsedPackageCannotBeEdited" xml:space="preserve">
+        <value>Pakej Terpakai tidak boleh diedit</value>
+    </data>
+    <data name="PackageHasExpired" xml:space="preserve">
+        <value>Pakej Sudah Tamat Tempoh</value>
+    </data>
+    <data name="PackageIsInactive" xml:space="preserve">
+        <value>Pakej Tidak Aktif</value>
+    </data>
+    <data name="PackageAlreadyUsedUp" xml:space="preserve">
+        <value>Pakej Dah Habis</value>
+    </data>
+    <data name="Invalid Voucher Id" xml:space="preserve">
+        <value>Id Baucar Tidak Sah</value>
+    </data>
+    <data name="VoucherIsVoided" xml:space="preserve">
+        <value>Baucar Telah Dibatalkan</value>
+    </data>
+    <data name="VoucherIsUsed" xml:space="preserve">
+        <value>Baucar Telah Digunakan</value>
+    </data>
+    <data name="VoucherIsExpired" xml:space="preserve">
+        <value>Baucar telah Tamat Tempoh</value>
+    </data>
+    <data name="PleaseInputTitle" xml:space="preserve">
+        <value>Sila Masukkan Tajuk</value>
+    </data>
+    <data name="InvalidVoucherId" xml:space="preserve">
+        <value>Baucar Id Tidak Sah</value>
+    </data>
+	<data name="PleaseInputOtp" xml:space="preserve">
+        <value>Sila Input OTP</value>
+    </data>
+	<data name="UserWalletAdded" xml:space="preserve">
+    <value>Customer sudah register dalam merchant</value>
+  </data>
+    <data name="InvalidPassword" xml:space="preserve">
+        <value>Kata Laluan tidak sah</value>
+    </data>
+    <data name="InvalidCounterPassword" xml:space="preserve">
+        <value>Kata Laluan Kaunter Tidak Sah</value>
+    </data>
+	<data name="InvalidManagerPassword" xml:space="preserve">
+        <value>Kata Laluan Manager Tidak Sah</value>
+    </data>
+    <data name="PleaseInputVoucherName" xml:space="preserve">
+        <value>Sila masukkan name baucar</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreateVoucher" xml:space="preserve">
+        <value>Hanya Pengurus Cawangan Boleh Membuat Baucar</value>
+    </data>
+    <data name="UsedVoucherCannotBeEdited" xml:space="preserve">
+        <value>Baucer Terpakai tidak boleh diedit</value>
+    </data>
+    <data name="InvalidCustomerVoucherId" xml:space="preserve">
+        <value>ID Baucar Pelanggan Tidak Sah</value>
+    </data>
+	<data name="DuplicatePassportProfile" xml:space="preserve">
+    <value>Duplicate passport found ! Please use the search passport function</value>
+  </data>
+    <data name="CustomerVoucherIsVoided" xml:space="preserve">
+        <value>Baucar Pelanggan Telah Dibatalkan</value>
+    </data>
+    <data name="CustomerVoucherIsUsed" xml:space="preserve">
+        <value>Baucar Pelanggan Telah Digunakan</value>
+    </data>
+    <data name="VoucherInactive" xml:space="preserve">
+        <value>Baucar tidak aktif</value>
+    </data>
+    <data name="VoucherUsedUp" xml:space="preserve">
+        <value>Baucar telah habis</value>
+    </data>
+    <data name="AtleastOnePackageItem" xml:space="preserve">
+        <value>Sila Cipta Sekurang-kurangnya Satu Item Pakej</value>
+    </data>
+    <data name="PackageItemPriceGreaterThan0" xml:space="preserve">
+        <value>Harga Item #{0} Mesti Lebih Daripada 0</value>
+    </data>
+    <data name="PackageItemQuantityGreaterThan1" xml:space="preserve">
+        <value>Kuantiti Item #{0} Mesti Lebih Daripada 1</value>
+    </data>
+    <data name="PackageItemIsExpired" xml:space="preserve">
+        <value>Item Pakej Telah Taman Tempoh</value>
+    </data>
+    <data name="PackageItemIsUsed" xml:space="preserve">
+        <value>Item Pakej Telah Diguna</value>
+    </data>
+    <data name="PackageItemIsVoided" xml:space="preserve">
+        <value>Item Pakej Telah Dibatalkan</value>
+    </data>
+    <data name="InvalidPackageItemId" xml:space="preserve">
+        <value>Item Pakej Id tidak sah</value>
+    </data>
+    <data name="CustomerPackageIsVoid" xml:space="preserve">
+        <value>Pakej Pelanggan Telah Dibatalkan</value>
+    </data>
+    <data name="InvalidCustomerPackageId" xml:space="preserve">
+        <value>Id Pakej Pelanggan Tidak Sah</value>
+    </data>
+    <data name="AtleastOnePackageItemSelected" xml:space="preserve">
+        <value>Sila Pilih Sekurang-kurangnya Satu Item</value>
+    </data>
+    <data name="InvalidPostId" xml:space="preserve">
+        <value>Id Promosi Tidak Sah</value>
+    </data>
+    <data name="SendingLimitExceed" xml:space="preserve">
+        <value>Had Penghantaran Melebihi</value>
+    </data>
+    <data name="MaximumTitleLength500" xml:space="preserve">
+        <value>Panjang Aksara Maksimum untuk Tajuk ialah 500</value>
+    </data>
+    <data name="OnlyMemberCanDeleteAccount" xml:space="preserve">
+        <value>Hanya ahli boleh memadam akaun</value>
+    </data>
+    <data name="InvalidAction" xml:space="preserve">
+        <value>Tindakan tidak sah</value>
+    </data>
+    <data name="LoginFail" xml:space="preserve">
+        <value>No Telefon tidak didaftarkan dalam sistem kami</value>
+    </data>
+</root>

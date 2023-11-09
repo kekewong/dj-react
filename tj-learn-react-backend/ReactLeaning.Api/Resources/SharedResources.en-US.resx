@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" id="root">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string" />
+                            <xsd:attribute name="name" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+                            <xsd:attribute ref="xml:space" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="PleaseInputPhoneNo" xml:space="preserve">
+    <value>Please Input Mobile Number</value>
+  </data>
+	<data name="PleaseInputUniqueKey" xml:space="preserve">
+    <value>Please Input Receipt Number</value>
+  </data>
+	<data name="PleaseInputUniqueKey" xml:space="preserve">
+    <value>Please Input Receipt Number</value>
+  </data>
+    <data name="InvalidUniqueKey" xml:space="preserve">
+    <value>Invalid Receipt Number</value>
+  </data>
+	<data name="NotAbleToVoidDueToHours" xml:space="preserve">
+    <value>Not able to void this attendance due to date overdue</value>
+  </data>
+	<data name="InvalidPhoneNoOrOtp" xml:space="preserve">
+    <value>Invalid Mobile Number Or Otp</value>
+  </data>
+    <data name="InvalidLoginCountExceeded" xml:space="preserve">
+    <value>Invalid Login Count Exceeded</value>
+  </data>
+    <data name="InvalidPermission" xml:space="preserve">
+    <value>Invalid Permission</value>
+  </data>
+    <data name="PleaseInputPassword" xml:space="preserve">
+    <value>Please Input Password</value>
+  </data>
+	<data name="PleaseInputOldPassword" xml:space="preserve">
+    <value>Please input old password</value>
+  </data>
+	<data name="OldPasswordInvalid" xml:space="preserve">
+    <value>Old password invalid</value>
+  </data>
+	<data name="PleaseInputMerchantType" xml:space="preserve">
+    <value>Please input merchant type</value>
+  </data>
+	<data name="PleaseInputBranch" xml:space="preserve">
+    <value>Please input branch</value>
+  </data>
+	<data name="InvalidOperation" xml:space="preserve">
+    <value>Invalid operation</value>
+  </data>
+	<data name="PleaseInputUsername" xml:space="preserve">
+    <value>Please input username</value>
+  </data>
+	<data name="UsernameExists" xml:space="preserve">
+    <value>Username not available, please use another username</value>
+  </data>
+	<data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>Invalid Username Or Password</value>
+  </data>
+    <data name="PleaseInputBranchCode" xml:space="preserve">
+    <value>Please Input Branch Code</value>
+  </data>
+    <data name="InvalidBranchCode" xml:space="preserve">
+    <value>Invalid Branch Code</value>
+  </data>
+    <data name="InvalidPhoneNo" xml:space="preserve">
+    <value>Invalid Mobile Number</value>
+  </data>
+	<data name="UserWalletAdded" xml:space="preserve">
+    <value>User already registered to merchant</value>
+  </data>
+    <data name="InvalidCode" xml:space="preserve">
+    <value>Invalid Code</value>
+  </data>
+    <data name="InvalidMerchantId" xml:space="preserve">
+    <value>Invalid MerchantId</value>
+  </data>
+	<data name="PasswordAndConfirmPasswordMustMatch" xml:space="preserve">
+    <value>Invalid Confirm Password</value>
+  </data>
+    <data name="UserIsNotMember" xml:space="preserve">
+    <value>User haven't join member</value>
+  </data>
+    <data name="InvalidBranchId" xml:space="preserve">
+    <value>Invalid BranchId</value>
+  </data>
+    <data name="AmountGreaterThan0" xml:space="preserve">
+    <value>Amount Should Be Greater Than 0</value>
+  </data>
+    <data name="BalanceInsufficient" xml:space="preserve">
+    <value>Balance Insufficient</value>
+  </data>
+    <data name="MaximumCharacterLength30" xml:space="preserve">
+    <value>Maximum Character Length Is 30</value>
+  </data>
+    <data name="PhoneNumberWasTaken" xml:space="preserve">
+    <value>Mobile Number Was Registered</value>
+  </data> 
+    <data name="PleaseInputName" xml:space="preserve">
+    <value>Please Input Name</value>
+  </data>
+	<data name="PleaseInputPassport" xml:space="preserve">
+    <value>Please Input Passport</value>
+  </data>
+	<data name="DuplicatePassportProfile" xml:space="preserve">
+    <value>Duplicate passport found ! Please use the search passport function</value>
+  </data>
+    <data name="MaximumCharacterLength50" xml:space="preserve">
+    <value>Maximum Character Length Is 50</value>
+  </data>
+    <data name="PleaseRequestLater" xml:space="preserve">
+    <value>Please Request Later</value>
+  </data>
+    <data name="UserAlreadyVerified" xml:space="preserve">
+    <value>User Already Verified</value>
+  </data>
+    <data name="InvalidOtp" xml:space="preserve">
+    <value>Invalid OTP</value>
+  </data>
+    <data name="OtpSmsNew" xml:space="preserve">
+        <value>Welcome to UNI! Your OTP is {0}. </value>
+    </data>
+	<data name="LoginOtp" xml:space="preserve">
+		<value>Login attempt! Your OTP is {0} . </value>
+	</data>
+    <data name="InvalidPaymentId" xml:space="preserve">
+        <value>Invalid Payment Id</value>
+    </data>
+	<data name="InvalidTopUpId" xml:space="preserve">
+        <value>Invalid TopUp Id</value>
+    </data>
+    <data name="PaymentIsVoided" xml:space="preserve">
+        <value>Payment has been voided</value>
+    </data>
+	<data name="TopUpIsVoided" xml:space="preserve">
+        <value>Top Up record has been voided</value>
+    </data>
+	<data name="AfterVoidShouldNotBalanceZero" xml:space="preserve">
+        <value>Insufficient wallet balance to void the transaction</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreatePackage" xml:space="preserve">
+        <value>Only Branch Manager Can Create Package</value>
+    </data>
+	<data name="OnlyBranchManagerCanResetPassword" xml:space="preserve">
+        <value>Only branch manager can reset password</value>
+    </data>
+	<data name="OnlyAbleToResetSameMerchantUser" xml:space="preserve">
+        <value>Target user not in same merchant</value>
+    </data>
+    <data name="PleaseInputPackageName" xml:space="preserve">
+        <value>Please Input Package Name</value>
+    </data>
+    <data name="QuantityGreaterThan1" xml:space="preserve">
+        <value>Quantity Should Be Greater Than 1</value>
+    </data>
+    <data name="VoucherPriceGreaterThan0" xml:space="preserve">
+        <value>Voucher #{0} Price Should Be Greater Than 0</value>
+    </data>
+    <data name="PriceGreaterThan0" xml:space="preserve">
+        <value>Price Should Be Greater Than 0</value>
+    </data>
+    <data name="InvalidPackageId" xml:space="preserve">
+        <value>Invalid Package Id</value>
+    </data>
+    <data name="UsedPackageCannotBeEdited" xml:space="preserve">
+        <value>Used Package Cannot Be Edited</value>
+    </data>
+    <data name="PackageHasExpired" xml:space="preserve">
+        <value>Package Already Expired</value>
+    </data>
+    <data name="PackageIsInactive" xml:space="preserve">
+        <value>Package Is Inactive</value>
+    </data>
+    <data name="PackageAlreadyUsedUp" xml:space="preserve">
+        <value>Packages Was Used Up</value>
+    </data>
+    <data name="Invalid Voucher Id" xml:space="preserve">
+        <value>Invalid Voucher Id</value>
+    </data>
+    <data name="VoucherIsVoided" xml:space="preserve">
+        <value>Voucher Was Voided</value>
+    </data>
+    <data name="VoucherIsUsed" xml:space="preserve">
+        <value>Voucher Was Used</value>
+    </data>
+    <data name="VoucherIsExpired" xml:space="preserve">
+        <value>Voucher Was Expired</value>
+    </data>
+    <data name="PleaseInputTitle" xml:space="preserve">
+        <value>Please Input Title</value>
+    </data>
+    <data name="InvalidVoucherId" xml:space="preserve">
+        <value>Invalid Voucher Id</value>
+    </data>
+	<data name="PleaseInputOtp" xml:space="preserve">
+        <value>Please Input OTP</value>
+    </data>
+    <data name="InvalidPassword" xml:space="preserve">
+        <value>Invalid Password</value>
+    </data>
+    <data name="InvalidCounterPassword" xml:space="preserve">
+        <value>Invalid Counter Password</value>
+    </data>
+	<data name="InvalidManagerPassword" xml:space="preserve">
+        <value>Invalid Manager Password</value>
+    </data>
+    <data name="PleaseInputVoucherName" xml:space="preserve">
+        <value>Please input Voucher Name</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreateVoucher" xml:space="preserve">
+        <value>Only Branch Manager Can Create Voucher</value>
+    </data>
+    <data name="UsedVoucherCannotBeEdited" xml:space="preserve">
+        <value>Used Voucher Cannot Be Edited</value>
+    </data>
+    <data name="InvalidCustomerVoucherId" xml:space="preserve">
+        <value>Invalid Customer Voucher Id</value>
+    </data>
+    <data name="CustomerVoucherIsVoided" xml:space="preserve">
+        <value>Customer Voucher Already Voided</value>
+    </data>
+    <data name="CustomerVoucherIsUsed" xml:space="preserve">
+        <value>Customer Voucher Already Used</value>
+    </data>
+    <data name="VoucherInactive" xml:space="preserve">
+        <value>Voucher Is Inactive</value>
+    </data>
+    <data name="VoucherUsedUp" xml:space="preserve">
+        <value>Voucher already used up</value>
+    </data>
+    <data name="AtleastOnePackageItem" xml:space="preserve">
+        <value>Please Create At Least One Item</value>
+    </data>
+    <data name="PackageItemPriceGreaterThan0" xml:space="preserve">
+        <value>Package Item #{0} Price Should Be Greater Than 0</value>
+    </data>
+    <data name="PackageItemQuantityGreaterThan1" xml:space="preserve">
+        <value>Package Item #{0} Quantity Should Be Greater Than 1</value>
+    </data>
+    <data name="PackageItemIsExpired" xml:space="preserve">
+        <value>Package Item Was Expired</value>
+    </data>
+    <data name="PackageItemIsUsed" xml:space="preserve">
+        <value>Package Item Was Used</value>
+    </data>
+    <data name="PackageItemIsVoided" xml:space="preserve">
+        <value>Package Item Was Voided</value>
+    </data>
+    <data name="InvalidPackageItemId" xml:space="preserve">
+        <value>Invalid Package Item Id</value>
+    </data>
+    <data name="CustomerPackageIsVoid" xml:space="preserve">
+        <value>Customer Package Was Voided</value>
+    </data>
+    <data name="InvalidCustomerPackageId" xml:space="preserve">
+        <value>Invalid Customer Package Id</value>
+    </data>
+    <data name="AtleastOnePackageItemSelected" xml:space="preserve">
+        <value>Please Select At Least One Item</value>
+    </data>
+    <data name="InvalidPostId" xml:space="preserve">
+        <value>Invalid Promotion Id</value>
+    </data>
+    <data name="SendingLimitExceed" xml:space="preserve">
+        <value>Sending Limit Exceeded</value>
+    </data>
+    <data name="MaximumTitleLength500" xml:space="preserve">
+        <value>Maximum Character Length For Title Is 500</value>
+    </data>
+    <data name="OnlyMemberCanDeleteAccount" xml:space="preserve">
+        <value>Only Member can delete account</value>
+    </data>
+    <data name="InvalidAction" xml:space="preserve">
+        <value>Invalid Action</value>
+    </data>
+    <data name="LoginFail" xml:space="preserve">
+        <value>Phone No is not registered in our system</value>
+    </data>
+</root>

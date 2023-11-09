@@ -1,0 +1,143 @@
+<root>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>1.3</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="InvalidPackageId" xml:space="preserve">
+        <value />
+    </data>
+    <data name="UsedPackageCannotBeEdited" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageHasExpired" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageIsInactive" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageAlreadyUsedUp" xml:space="preserve">
+        <value />
+    </data>
+    <data name="Invalid Voucher Id" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherIsVoided" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherIsUsed" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherIsExpired" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PleaseInputTitle" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidVoucherId" xml:space="preserve">
+        <value />
+    </data>
+	<data name="LoginOtp" xml:space="preserve">
+        <value />
+    </data>
+	<data name="InvalidPhoneNoOrOtp" xml:space="preserve">
+        <value />
+    </data>
+	<data name="PleaseInputOtp" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidPassword" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidCounterPassword" xml:space="preserve">
+        <value />
+    </data>
+	<data name="InvalidManagerPassword" xml:space="preserve">
+        <value />
+    </data>
+<data name="UserWalletAdded" xml:space="preserve">
+    <value/>
+  </data>
+    <data name="PleaseInputVoucherName" xml:space="preserve">
+        <value />
+    </data>
+    <data name="OnlyBranchManagerCanCreateVoucher" xml:space="preserve">
+        <value />
+    </data>
+    <data name="UsedVoucherCannotBeEdited" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidCustomerVoucherId" xml:space="preserve">
+        <value />
+    </data>
+    <data name="CustomerVoucherIsVoided" xml:space="preserve">
+        <value />
+    </data>
+    <data name="CustomerVoucherIsUsed" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherInactive" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherUsedUp" xml:space="preserve">
+        <value />
+    </data>
+    <data name="AtleastOnePackageItem" xml:space="preserve">
+        <value />
+    </data>
+    <data name="VoucherPriceGreaterThan0" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageItemPriceGreaterThan0" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageItemQuantityGreaterThan1" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageItemIsUsed" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageItemIsVoided" xml:space="preserve">
+        <value />
+    </data>
+    <data name="PackageItemIsExpired" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidPackageItemId" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidCustomerPackageId" xml:space="preserve">
+        <value />
+    </data>
+    <data name="CustomerPackageIsVoid" xml:space="preserve">
+        <value />
+    </data>
+    <data name="AtleastOnePackageItemSelected" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidPostId" xml:space="preserve">
+        <value />
+    </data>
+    <data name="SendingLimitExceed" xml:space="preserve">
+        <value />
+    </data>
+    <data name="MaximumTitleLength500" xml:space="preserve">
+        <value />
+    </data>
+    <data name="OnlyMemberCanDeleteAccount" xml:space="preserve">
+        <value />
+    </data>
+    <data name="InvalidAction" xml:space="preserve">
+        <value />
+    </data>
+    <data name="LoginFail" xml:space="preserve">
+        <value />
+    </data>
+</root>

@@ -84,7 +84,6 @@ const LoginPage = () => {
 
   const onSubmit = (data: LoginFormData) => {
     const { email, password } = data
-    debugger
     auth.login({ email, password, rememberMe }, () => {
       setError('email', {
         type: 'manual',

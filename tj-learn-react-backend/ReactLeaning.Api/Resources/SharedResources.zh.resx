@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:import namespace="http://www.w3.org/XML/1998/namespace"/>
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="metadata">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" use="required" type="xsd:string"/>
+                            <xsd:attribute name="type" type="xsd:string"/>
+                            <xsd:attribute name="mimetype" type="xsd:string"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="assembly">
+                        <xsd:complexType>
+                            <xsd:attribute name="alias" type="xsd:string"/>
+                            <xsd:attribute name="name" type="xsd:string"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1"/>
+                            <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3"/>
+                            <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4"/>
+                            <xsd:attribute ref="xml:space"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1"/>
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required"/>
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="resmimetype">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="version">
+        <value>2.0</value>
+    </resheader>
+    <resheader name="reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <resheader name="writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        </value>
+    </resheader>
+    <data name="PleaseInputPhoneNo" xml:space="preserve">
+    <value>请输入手机号码</value>
+  </data>
+	<data name="PleaseInputUniqueKey" xml:space="preserve">
+    <value>请输入白单号码</value>
+  </data>
+	<data name="InvalidUniqueKey" xml:space="preserve">
+    <value>白单号码不能被使用</value>
+  </data>
+	<data name="NotAbleToVoidDueToHours" xml:space="preserve">
+    <value>白单已经超过撤除期限</value>
+  </data>
+    <data name="InvalidPhoneNoOrPassword" xml:space="preserve">
+    <value>手机号码或密码无效</value>
+  </data>
+	<data name="InvalidPhoneNoOrOtp" xml:space="preserve">
+    <value>手机号码或一次性密码无效</value>
+  </data>
+    <data name="InvalidLoginCountExceeded" xml:space="preserve">
+    <value>超过无效登录计数</value>
+  </data>
+    <data name="InvalidPermission" xml:space="preserve">
+    <value>无效的权限</value>
+  </data>
+    <data name="PleaseInputPassword" xml:space="preserve">
+    <value>请输入密码</value>
+  </data>
+	<data name="PleaseInputOldPassword" xml:space="preserve">
+    <value>请输入旧密码</value>
+  </data>
+	<data name="OldPasswordInvalid" xml:space="preserve">
+    <value>旧密码不正确</value>
+  </data>
+    <data name="InvalidUsernameOrPassword" xml:space="preserve">
+    <value>用户名或密码无效</value>
+  </data>
+    <data name="PleaseInputBranchCode" xml:space="preserve">
+    <value>请输入分行代码</value>
+  </data>
+	<data name="PleaseInputMerchantType" xml:space="preserve">
+    <value>请输入用户类型</value>
+  </data>
+	<data name="PleaseInputBranch" xml:space="preserve">
+    <value>请输入分支</value>
+  </data>
+	<data name="PleaseInputUsername" xml:space="preserve">
+    <value>请输入账号</value>
+  </data>
+	<data name="UsernameExists" xml:space="preserve">
+    <value>账号无法使用, 请输入另外账号</value>
+  </data>
+	<data name="InvalidOperation" xml:space="preserve">
+    <value>操作不正确</value>
+  </data>
+    <data name="InvalidBranchCode" xml:space="preserve">
+    <value>无效的分支代码</value>
+  </data>
+	<data name="PasswordAndConfirmPasswordMustMatch" xml:space="preserve">
+    <value>确认密码与密码不一致</value>
+  </data>
+    <data name="InvalidCode" xml:space="preserve">
+    <value>无效的代码</value>
+  </data>
+    <data name="InvalidMerchantId" xml:space="preserve">
+    <value>无效的商家ID</value>
+  </data>
+    <data name="UserIsNotMember" xml:space="preserve">
+    <value>用户尚未加入会员</value>
+  </data>
+    <data name="InvalidBranchId" xml:space="preserve">
+    <value>无效的分支ID</value>
+  </data>
+    <data name="AmountGreaterThan0" xml:space="preserve">
+    <value>金额应大于0</value>
+  </data>
+    <data name="BalanceInsufficient" xml:space="preserve">
+    <value>余额不足</value>
+  </data>
+    <data name="MaximumCharacterLength30" xml:space="preserve">
+    <value>最大字符长度为30</value>
+  </data>
+    <data name="PhoneNumberWasTaken" xml:space="preserve">
+    <value>手机号码已注册</value>
+  </data>
+    <data name="PleaseInputName" xml:space="preserve">
+    <value>请输入姓名</value>
+  </data>
+	<data name="PleaseInputPassport" xml:space="preserve">
+    <value>S请输入护照号码</value>
+  </data>
+	<data name="InvalidPhoneNo" xml:space="preserve">
+    <value>电话号码错误</value>
+  </data>
+    <data name="MaximumCharacterLength50" xml:space="preserve">
+    <value>最大字符长度为50</value>
+  </data>
+    <data name="PleaseRequestLater" xml:space="preserve">
+    <value>请稍后申请</value>
+  </data>
+    <data name="UserAlreadyVerified" xml:space="preserve">
+    <value>用户已验证</value>
+  </data>
+    <data name="InvalidOtp" xml:space="preserve">
+    <value>无效的一次性密码</value>
+  </data>
+    <data name="OtpSmsNew" xml:space="preserve">
+        <value>欢迎来到UNI.您的一次性密码是{0}.</value>
+    </data>
+	<data name="LoginOtp" xml:space="preserve">
+        <value>您的一次性登入密码是{0} . </value>
+    </data>
+    <data name="InvalidPaymentId" xml:space="preserve">
+        <value>无效的付款ID</value>
+    </data>
+	<data name="InvalidTopUpId" xml:space="preserve">
+        <value>无效的充值ID</value>
+    </data>
+    <data name="PaymentIsVoided" xml:space="preserve">
+        <value>付款已作废</value>
+    </data>
+	<data name="TopUpIsVoided" xml:space="preserve">
+        <value>充值记录已作废</value>
+    </data>
+	<data name="AfterVoidShouldNotBalanceZero" xml:space="preserve">
+        <value>充值记录取消后钱包余额不足</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreatePackage" xml:space="preserve">
+        <value>只有分行经理可以创建配套</value>
+    </data>
+	<data name="OnlyBranchManagerCanResetPassword" xml:space="preserve">
+        <value>只有分行经理可以更换密码</value>
+    </data>
+	<data name="OnlyAbleToResetSameMerchantUser" xml:space="preserve">
+        <value>用户不匹配</value>
+    </data>
+    <data name="PleaseInputPackageName" xml:space="preserve">
+        <value>请输入配套名称</value>
+    </data>
+    <data name="QuantityGreaterThan1" xml:space="preserve">
+        <value>数量必须大于1</value>
+    </data>
+    <data name="VoucherPriceGreaterThan0" xml:space="preserve">
+        <value>优惠券#{0}价格必须大于 0</value>
+    </data>
+    <data name="PriceGreaterThan0" xml:space="preserve">
+        <value>价格应大于0</value>
+    </data>
+    <data name="InvalidPackageId" xml:space="preserve">
+        <value>无效的配套ID</value>
+    </data>
+    <data name="UsedPackageCannotBeEdited" xml:space="preserve">
+        <value>已用配套无法编辑</value>
+    </data>
+    <data name="PackageHasExpired" xml:space="preserve">
+        <value>配套已过期</value>
+    </data>
+    <data name="PackageIsInactive" xml:space="preserve">
+        <value>配套已停止使用</value>
+    </data>
+    <data name="PackageAlreadyUsedUp" xml:space="preserve">
+        <value>配套已用完</value>
+    </data>
+    <data name="Invalid Voucher Id" xml:space="preserve">
+        <value>优惠券ID无效</value>
+    </data>
+    <data name="VoucherIsVoided" xml:space="preserve">
+        <value>优惠券作废</value>
+    </data>
+    <data name="VoucherIsUsed" xml:space="preserve">
+        <value>优惠券已使用</value>
+    </data>
+    <data name="VoucherIsExpired" xml:space="preserve">
+        <value>优惠券已过期</value>
+    </data>
+    <data name="PleaseInputTitle" xml:space="preserve">
+        <value>请输入标题</value>
+    </data>
+    <data name="InvalidVoucherId" xml:space="preserve">
+        <value>无效的优惠券ID</value>
+    </data>
+	<data name="PleaseInputOtp" xml:space="preserve">
+        <value>请输入一次性密码</value>
+    </data>
+	<data name="UserWalletAdded" xml:space="preserve">
+    <value>顾客已经在商家注册了</value>
+  </data>
+    <data name="InvalidPassword" xml:space="preserve">
+        <value>密码无效</value>
+    </data>
+    <data name="InvalidCounterPassword" xml:space="preserve">
+        <value>无效的柜台密码</value>
+    </data>
+	<data name="InvalidManagerPassword" xml:space="preserve">
+        <value>无效的经理密码</value>
+    </data>
+    <data name="PleaseInputVoucherName" xml:space="preserve">
+        <value>请输入优惠券</value>
+    </data>
+    <data name="OnlyBranchManagerCanCreateVoucher" xml:space="preserve">
+        <value>只有分行经理可以创建优惠券</value>
+    </data>
+    <data name="UsedVoucherCannotBeEdited" xml:space="preserve">
+        <value>已用优惠券包无法编辑</value>
+    </data>
+    <data name="InvalidCustomerVoucherId" xml:space="preserve">
+        <value>无效的优惠券ID</value>
+    </data>
+    <data name="CustomerVoucherIsVoided" xml:space="preserve">
+        <value>优惠券已经无效
+</value>
+    </data>
+    <data name="CustomerVoucherIsUsed" xml:space="preserve">
+        <value>优惠券已使用
+</value>
+    </data>
+    <data name="VoucherInactive" xml:space="preserve">
+        <value>优惠券非活跃</value>
+    </data>
+    <data name="VoucherUsedUp" xml:space="preserve">
+        <value>优惠券已经用完</value>
+    </data>
+    <data name="AtleastOnePackageItem" xml:space="preserve">
+        <value>请创建至少一个配套物品</value>
+    </data>
+    <data name="PackageItemPriceGreaterThan0" xml:space="preserve">
+        <value>物品#{0}价格必须大于 0</value>
+    </data>
+    <data name="PackageItemQuantityGreaterThan1" xml:space="preserve">
+        <value>物品#{0}数量必须大于 1</value>
+    </data>
+    <data name="PackageItemIsExpired" xml:space="preserve">
+        <value>配套物品已过期</value>
+    </data>
+    <data name="PackageItemIsUsed" xml:space="preserve">
+        <value>配套物品已使用</value>
+    </data>
+    <data name="PackageItemIsVoided" xml:space="preserve">
+        <value>配套物品已无效</value>
+    </data>
+    <data name="InvalidPackageItemId" xml:space="preserve">
+        <value>无效的配套物品ID</value>
+    </data>
+    <data name="CustomerPackageIsVoid" xml:space="preserve">
+        <value>客户配套已经无效</value>
+    </data>
+    <data name="InvalidCustomerPackageId" xml:space="preserve">
+        <value>无效的客户配套ID</value>
+    </data>
+    <data name="AtleastOnePackageItemSelected" xml:space="preserve">
+        <value>请选择至少一个配套物品</value>
+    </data>
+    <data name="InvalidPostId" xml:space="preserve">
+        <value>促销ID无效</value>
+    </data>
+	<data name="DuplicatePassportProfile" xml:space="preserve">
+    <value>护照号码已经注册了, 请用查询护照功能查询会员</value>
+  </data>
+    <data name="SendingLimitExceed" xml:space="preserve">
+        <value>发送限制超出</value>
+    </data>
+    <data name="MaximumTitleLength500" xml:space="preserve">
+        <value>标题的最大字符长度为 500</value>
+    </data>
+    <data name="InvalidAction" xml:space="preserve">
+        <value>无效动作</value>
+    </data>
+    <data name="OnlyMemberCanDeleteAccount" xml:space="preserve">
+        <value>只有会员可以删除帐户</value>
+    </data>
+    <data name="LoginFail" xml:space="preserve">
+        <value>
+电话号码未在我们的系统中注册</value>
+    </data>
+</root>
