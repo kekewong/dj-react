@@ -15,6 +15,18 @@ const columns: GridColDef[] = [
     minWidth: 230,
     field: 'name',
     headerName: 'Name'
+  },
+  {
+    flex: 0.2,
+    minWidth: 230,
+    field: 'phoneNo',
+    headerName: 'Phone No'
+  },
+  {
+    flex: 0.2,
+    minWidth: 230,
+    field: 'createDate',
+    headerName: 'Create Date'
   }
 ]
 
@@ -26,9 +38,10 @@ interface UserData {
 
 const UserListPage = () => {
   const [users, setUsers] = useState<UserData[]>([])
+  const [paginationModel, setPaginationModel] = useState({ page: 0, pageSize: 100 })
 
   useEffect(() => {
-    axios.post<UserData[]>('http://localhost:5000/api/user').then(res => setUsers(res.data))
+    axios.get<UserData[]>(`http://localhost:5000/api/user`).then(res => setUsers(res.data))
   }, [])
 
   return (
@@ -56,7 +69,16 @@ const UserListPage = () => {
             </Grid>
           </CardContent>
           <Divider />
-          <DataGrid rows={[]} columns={columns} />
+          <DataGrid
+            autoHeight
+            rows={users}
+            columns={columns}
+            getRowId={row => row.id}
+            disableRowSelectionOnClick
+            paginationModel={paginationModel}
+            onPaginationModelChange={setPaginationModel}
+            sx={{ '& .MuiDataGrid-columnHeaders': { borderRadius: 0 } }}
+          />
         </Card>
       </Grid>
     </Grid>
