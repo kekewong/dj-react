@@ -100,6 +100,15 @@ const UserListPage = () => {
     )
   }
 
+  async function handleSearch(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> {
+    await axios
+      .get<UserData[]>(`http://localhost:5000/api/user?username=${filters.username}`)
+      .then(res => setUsers(res.data))
+      .catch(error => {
+        console.error(error)
+      })
+  }
+
   return (
     <Grid container spacing={6}>
       <Grid item xs={12}>
@@ -116,12 +125,15 @@ const UserListPage = () => {
                     sx={{ mr: 6 }}
                     placeholder='Search User'
                     size='medium'
+                    name='username'
                     onChange={handleFilterChange}
                   />
                 </FormControl>
               </Grid>
               <Grid item sm={4} xs={12} style={{ display: 'flex' }}>
-                <Button variant='contained'>Search</Button>
+                <Button onClick={handleSearch} variant='contained'>
+                  Search
+                </Button>
               </Grid>
             </Grid>
           </CardContent>
