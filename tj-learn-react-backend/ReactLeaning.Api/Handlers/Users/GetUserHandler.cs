@@ -15,7 +15,7 @@ namespace ReactLeaning.Api.Handlers.Users
     
     public class GetUserRequest : IRequest<GetUserResponse>
     {
-        public long UserId { get; set; }
+        public long Id { get; set; }
     }
 
     public class GetUserResponse
@@ -54,7 +54,7 @@ namespace ReactLeaning.Api.Handlers.Users
 
         public Task<GetUserResponse> Handle(GetUserRequest request, CancellationToken cancellationToken)
         {
-            var user = _session.Load<User>(request.UserId);
+            var user = _session.Load<User>(request.Id);
             
             var response = new GetUserResponse
             {

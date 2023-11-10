@@ -26,6 +26,13 @@ namespace ReactLeaning.Api.Controllers
             return Ok(result);
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Get([FromQuery] GetUserRequest request)
+        {
+            var result = await _mediator.Send(request);
+            return Ok(result);
+        }
+
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] UpdateUserRequest request)
         {

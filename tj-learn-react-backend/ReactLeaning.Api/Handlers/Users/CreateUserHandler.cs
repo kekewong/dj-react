@@ -48,11 +48,12 @@ namespace ReactLeaning.Api.Handlers.Users
 
             var user = new User
             {
+                Username = request.Username,
                 Name = request.Name,
                 PhoneNo = request.PhoneNo,
                 Password = HashingExtension.Hash256(request.Password, _appSettingProvider.PasswordSalt),
                 CreateDate = DateTime.Now,
-                IsActive = false, 
+                IsActive = true, 
             };
 
             await _session.SaveAsync(user, cancellationToken);
