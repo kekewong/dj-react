@@ -14,13 +14,6 @@ const navigation = (): VerticalNavItemsType => {
       icon: 'mdi:home-outline'
     },
     {
-      path: '/acl',
-      action: 'read',
-      subject: 'acl-page',
-      title: 'Access Control',
-      icon: 'mdi:shield-outline'
-    },
-    {
       title: 'Users',
       icon: 'mdi:account-outline',
       children: [

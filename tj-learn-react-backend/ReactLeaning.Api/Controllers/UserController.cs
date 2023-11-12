@@ -27,7 +27,7 @@ namespace ReactLeaning.Api.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> Get([FromQuery] GetUserRequest request)
+        public async Task<IActionResult> Get([FromRoute]GetUserRequest request)
         {
             var result = await _mediator.Send(request);
             return Ok(result);

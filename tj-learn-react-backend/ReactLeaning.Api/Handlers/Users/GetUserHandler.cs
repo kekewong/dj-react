@@ -20,7 +20,7 @@ namespace ReactLeaning.Api.Handlers.Users
 
     public class GetUserResponse
     {
-        public long UserId { get; set; } 
+        public long Id { get; set; } 
         public string Name { get; set; }
         public string Username { get; set; }
         public string PhoneNo { get; set; } 
@@ -58,7 +58,7 @@ namespace ReactLeaning.Api.Handlers.Users
             
             var response = new GetUserResponse
             {
-                UserId = user.Id,
+                Id = user.Id,
                 Name = user.Name,
                 Username = user.Username,
                 PhoneNo = user.PhoneNo ,

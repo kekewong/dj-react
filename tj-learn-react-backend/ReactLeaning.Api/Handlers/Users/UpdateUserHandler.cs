@@ -40,7 +40,6 @@ namespace ReactLeaning.Api.Handlers.Users
             CancellationToken cancellationToken)
         {
             var user = _session.Get<User>(request.Id);
-
             user.Name = request.Name;
             user.PhoneNo = request.PhoneNo;
             user.Password = HashingExtension.Hash256(request.Password, _appSettingProvider.PasswordSalt);
