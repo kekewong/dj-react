@@ -27,7 +27,7 @@ const AddUserPage = () => {
     phoneNo: '',
     password: ''
   })
-
+  const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
   const [showPassword, setShowPassword] = useState(false)
 
   const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,7 +45,7 @@ const AddUserPage = () => {
     event.preventDefault()
 
     axios
-      .post(`http://localhost:5000/api/user`, data)
+      .post(`${baseApiUrl}/user`, data)
       .then(resp => {
         alert('Success')
       })

@@ -44,7 +44,7 @@ const UserDetailPage = () => {
     password: ''
   })
   const [showPassword, setShowPassword] = useState(false)
-
+  const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
   const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setUser({
       ...user,
@@ -63,7 +63,7 @@ const UserDetailPage = () => {
     event.preventDefault()
 
     axios
-      .put(`http://localhost:5000/api/user`, user)
+      .put(`${baseApiUrl}/user`, user)
       .then(resp => {
         alert('Success')
       })
@@ -79,8 +79,8 @@ const UserDetailPage = () => {
   useEffect(() => {
     if (!router.isReady) return
 
-    axios.get<UserData>(`http://localhost:5000/api/user/${router.query.id}`).then(res => setUser(res.data))
-  }, [router])
+    axios.get<UserData>(`${baseApiUrl}/user/${router.query.id}`).then(res => setUser(res.data))
+  }, [router, baseApiUrl])
 
   return (
     <>

@@ -40,14 +40,15 @@ const UserListPage = () => {
       [e.target.name]: e.target.value
     })
   }
+  const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
 
   useEffect(() => {
-    axios.get<UserData[]>(`http://localhost:5000/api/user`).then(res => setUsers(res.data))
-  }, [])
+    axios.get<UserData[]>(`${baseApiUrl}/user`).then(res => setUsers(res.data))
+  }, [baseApiUrl])
 
   const onDelete = function (id: number) {
     axios
-      .delete(`http://localhost:5000/api/user`, { data: { id: id } })
+      .delete(`${baseApiUrl}/user`, { data: { id: id } })
       .then(resp => {
         setUsers(users.filter(m => m.id != id))
       })
@@ -102,7 +103,7 @@ const UserListPage = () => {
 
   async function handleSearch(event: React.MouseEvent<HTMLButtonElement, MouseEvent>): Promise<void> {
     await axios
-      .get<UserData[]>(`http://localhost:5000/api/user?username=${filters.username}`)
+      .get<UserData[]>(`${baseApiUrl}/user?username=${filters.username}`)
       .then(res => setUsers(res.data))
       .catch(error => {
         console.error(error)
