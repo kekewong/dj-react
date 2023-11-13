@@ -17,33 +17,27 @@ import {
   Typography
 } from '@mui/material'
 import axios from 'axios'
-import { id } from 'date-fns/locale'
 import React, { useState } from 'react'
+import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
 
 const AddUserPage = () => {
-  const [data, setData] = useState({
-    username: '',
-    name: '',
-    phoneNo: '',
-    password: ''
-  })
   const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
   const [showPassword, setShowPassword] = useState(false)
 
-  const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setData({
-      ...data,
-      [e.target.name]: e.target.value
-    })
-  }
+  const { register, reset, handleSubmit } = useForm({
+    defaultValues: {
+      name: '',
+      username: '',
+      phoneNo: '',
+      password: ''
+    }
+  })
 
   const onShowPasswordClick = function () {
     setShowPassword(!showPassword)
   }
 
-  const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
-    event.preventDefault()
-
+  const onSubmit = (data: FieldValues) => {
     axios
       .post(`${baseApiUrl}/user`, data)
       .then(resp => {
@@ -61,25 +55,25 @@ const AddUserPage = () => {
           <Card>
             <CardHeader title='Add User' />
             <CardContent>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={5}>
                   <Grid item xs={12}>
-                    <TextField fullWidth label='Username' name='username' onChange={handleDataChange} />
+                    <TextField fullWidth {...register('username')} label='Username' name='username' />
                   </Grid>
                   <Grid item xs={12}>
-                    <TextField fullWidth type='text' label='Name' name='name' onChange={handleDataChange} />
+                    <TextField fullWidth {...register('name')} type='text' label='Name' name='name' />
                   </Grid>
                   <Grid item xs={12}>
-                    <TextField fullWidth type='text' label='Phone No' name='phoneNo' onChange={handleDataChange} />
+                    <TextField fullWidth {...register('phoneNo')} type='text' label='Phone No' name='phoneNo' />
                   </Grid>
                   <Grid item xs={12}>
                     <FormControl fullWidth>
                       <InputLabel htmlFor='password'>Password</InputLabel>
                       <OutlinedInput
+                        {...register('password')}
                         label='Password'
                         name='password'
                         id='password'
-                        onChange={handleDataChange}
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                           <InputAdornment position='end'>
@@ -104,12 +98,15 @@ const AddUserPage = () => {
                         gap: 5,
                         display: 'flex',
                         flexWrap: 'wrap',
-                        alignItems: 'center',
-                        justifyContent: 'space-between'
+                        alignItems: 'center'
                       }}
                     >
                       <Button type='submit' variant='contained' size='large'>
                         Create
+                      </Button>
+
+                      <Button type='button' variant='contained' size='large' onClick={() => reset()}>
+                        Reset
                       </Button>
                     </Box>
                   </Grid>
