@@ -16,10 +16,11 @@ import {
   FormControlLabel,
   Checkbox
 } from '@mui/material'
-import { Box } from '@mui/system'
+import { Box, getValue } from '@mui/system'
 import axios from 'axios'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
+import { FieldValues, useForm } from 'react-hook-form'
 
 interface UserData {
   id: number
@@ -35,35 +36,25 @@ interface Props {
 }
 
 const UserDetailPage = () => {
-  const [user, setUser] = useState<UserData>({
-    name: '',
-    id: 0,
-    username: '',
-    phoneNo: '',
-    isActive: false,
-    password: ''
+  const { register, reset, handleSubmit, getValues, setValue } = useForm({
+    defaultValues: {
+      name: '',
+      id: 0,
+      username: '',
+      phoneNo: '',
+      isActive: false,
+      password: ''
+    }
   })
+  const [isActive, setIsActive] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
-  const handleDataChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.value
-    })
-  }
-  const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setUser({
-      ...user,
-      [e.target.name]: e.target.checked
-    })
-  }
+
   const router = useRouter()
 
-  const handleSubmit = (event: React.SyntheticEvent<HTMLFormElement>) => {
-    event.preventDefault()
-
+  const onSubmit = (data: FieldValues) => {
     axios
-      .put(`${baseApiUrl}/user`, user)
+      .put(`${baseApiUrl}/user`, data)
       .then(resp => {
         alert('Success')
       })
@@ -79,56 +70,59 @@ const UserDetailPage = () => {
   useEffect(() => {
     if (!router.isReady) return
 
-    axios.get<UserData>(`${baseApiUrl}/user/${router.query.id}`).then(res => setUser(res.data))
-  }, [router, baseApiUrl])
+    axios.get<UserData>(`${baseApiUrl}/user/${router.query.id}`).then(res => {
+      reset(res.data)
+      setIsActive(res.data.isActive)
+    })
+  }, [router, baseApiUrl, reset])
 
   return (
     <>
       <Grid container spacing={6}>
         <Grid item xs={12}>
           <Card>
-            <CardHeader title={'Edit User (ID:' + user.id + ')'} />
+            <CardHeader title={'Edit User (ID:' + getValues('id') + ')'} />
             <CardContent>
-              <form onSubmit={handleSubmit}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <Grid container spacing={5}>
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
+                      {...register('username')}
                       inputProps={{ readOnly: true }}
-                      label='Username'
                       name='username'
-                      onChange={handleDataChange}
-                      value={user.username}
+                      label='username'
+                      InputLabelProps={{ shrink: true }}
                     />
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
+                      {...register('name')}
                       type='text'
                       label='Name'
                       name='name'
-                      onChange={handleDataChange}
-                      value={user.name}
+                      InputLabelProps={{ shrink: true }}
                     />
                   </Grid>
                   <Grid item xs={12}>
                     <TextField
                       fullWidth
+                      {...register('phoneNo')}
                       type='text'
                       label='Phone No'
                       name='phoneNo'
-                      onChange={handleDataChange}
-                      value={user.phoneNo}
+                      InputLabelProps={{ shrink: true }}
                     />
                   </Grid>
                   <Grid item xs={12}>
                     <FormControl fullWidth>
                       <InputLabel htmlFor='password'>Password</InputLabel>
                       <OutlinedInput
+                        {...register('password')}
                         label='Password'
                         name='password'
                         id='password'
-                        onChange={handleDataChange}
                         type={showPassword ? 'text' : 'password'}
                         endAdornment={
                           <InputAdornment position='end'>
@@ -150,7 +144,16 @@ const UserDetailPage = () => {
                   <Grid item xs={12}>
                     <FormControlLabel
                       label='Checked'
-                      control={<Checkbox name='isActive' checked={user.isActive} onChange={handleCheckboxChange} />}
+                      control={
+                        <Checkbox
+                          name='isActive'
+                          checked={isActive}
+                          onChange={e => {
+                            setValue('isActive', e.target.checked ? true : false)
+                            setIsActive(!isActive)
+                          }}
+                        />
+                      }
                     />
                   </Grid>
 
