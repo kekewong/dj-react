@@ -1,16 +1,10 @@
 import { Sequelize, DataTypes, Model } from "sequelize";
+import "dotenv/config";
+import { connection } from "../utils/Database";
 
-const dbName = process.env.MYSQL_DB_NAME || "";
-const dbUsername = process.env.MYSQL_DB_USERNAME || "";
-const dbPassword = process.env.MYSQL_DB_PASSWORD || "";
-const dbHost = process.env.MYSQL_DB_HOST || "";
+const sequelize = connection;
 
-const sequelize = new Sequelize(dbName, dbUsername, dbPassword, {
-  host: dbHost,
-  dialect: "mysql",
-});
-
-class User extends Model {
+export class User extends Model {
   id: number;
   name: string;
   username: string;
@@ -47,7 +41,5 @@ User.init(
       allowNull: true,
     },
   },
-  { sequelize }
+  { sequelize, tableName: "user", modelName: "user" }
 );
-
-export default User;
