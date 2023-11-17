@@ -51,7 +51,7 @@ export const getUser = asyncHandler(async (req, res, next) => {
 });
 
 export const createUser = asyncHandler(async (req, res, next) => {
-  const body = req.body as CreateUpdateUserDto;
+  const body = req.body as CreateUserDto;
   const salt = process.env.LEARN_REACT_PASSWORD_SALT || "";
 
   const result = await sequelize.transaction(async (t) => {
@@ -77,6 +77,32 @@ export const createUser = asyncHandler(async (req, res, next) => {
   res.send();
 });
 
+export const updateUser = asyncHandler(async (req, res, next) => {
+  const body = req.body as UpdateUserDto;
+  const salt = process.env.LEARN_REACT_PASSWORD_SALT || "";
+
+  const result = await sequelize.transaction(async (t) => {
+    const hashPassword = crypto
+      .createHash("sha256")
+      .update(body.password)
+      .update(crypto.createHash("sha256").update(salt, "utf8").digest("hex"))
+      .digest("hex");
+    const user = await User.update(
+      {
+        name: body.name,
+        password: hashPassword,
+        is_active: body.isActive,
+        create_date: new Date(),
+        phone_no: body.phoneNo,
+      },
+      { where: { id: body.id }, transaction: t }
+    );
+
+    return user;
+  });
+  res.send();
+});
+
 interface UserDto {
   id: number;
   name: string;
@@ -85,9 +111,17 @@ interface UserDto {
   createDate: Date;
   isActive: boolean;
 }
-interface CreateUpdateUserDto {
+interface CreateUserDto {
   name: string | undefined;
   username: string | undefined;
+  phoneNo: string | undefined;
+  isActive: boolean;
+  password: string;
+}
+
+interface UpdateUserDto {
+  id: number;
+  name: string | undefined;
   phoneNo: string | undefined;
   isActive: boolean;
   password: string;
