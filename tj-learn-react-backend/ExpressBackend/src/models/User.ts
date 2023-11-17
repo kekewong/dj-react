@@ -37,7 +37,7 @@ User.init(
       allowNull: true,
     },
     create_date: {
-      type: DataTypes.STRING,
+      type: DataTypes.DATE,
       allowNull: true,
     },
   },
