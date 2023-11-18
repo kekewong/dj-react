@@ -74,7 +74,7 @@ export const createUser = asyncHandler(async (req, res, next) => {
 
     return user;
   });
-  res.send();
+  res.status(200);
 });
 
 export const updateUser = asyncHandler(async (req, res, next) => {
@@ -100,7 +100,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
 
     return user;
   });
-  res.send();
+  res.status(200);
 });
 
 interface UserDto {
