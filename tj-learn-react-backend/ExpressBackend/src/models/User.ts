@@ -1,8 +1,8 @@
-import { Sequelize, DataTypes, Model } from "sequelize";
+import { DataTypes, Model, Sequelize } from "sequelize";
+import { db } from "../utils/Database";
 import "dotenv/config";
-import { connection } from "../utils/Database";
 
-const sequelize = connection;
+const sequelize = db.connection;
 
 export class User extends Model {
   id: number;

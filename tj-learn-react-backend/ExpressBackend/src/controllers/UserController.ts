@@ -1,11 +1,11 @@
-import { Op } from "sequelize";
+import { Op, Transaction } from "sequelize";
 import { User } from "../models/User";
 import asyncHandler from "express-async-handler";
-import { connection } from "../utils/Database";
 import * as crypto from "crypto";
 import "dotenv/config";
+import { db } from "../utils/Database";
 
-const sequelize = connection;
+const sequelize = db.connection;
 
 export const getUserList = asyncHandler(async (req, res, next) => {
   let users: User[] = [];
@@ -54,7 +54,7 @@ export const createUser = asyncHandler(async (req, res, next) => {
   const body = req.body as CreateUserDto;
   const salt = process.env.LEARN_REACT_PASSWORD_SALT || "";
 
-  const result = await sequelize.transaction(async (t) => {
+  const result = await sequelize.transaction(async (t: Transaction) => {
     const hashPassword = crypto
       .createHash("sha256")
       .update(body.password)
@@ -81,7 +81,7 @@ export const updateUser = asyncHandler(async (req, res, next) => {
   const body = req.body as UpdateUserDto;
   const salt = process.env.LEARN_REACT_PASSWORD_SALT || "";
 
-  const result = await sequelize.transaction(async (t) => {
+  const result = await sequelize.transaction(async (t: Transaction) => {
     const hashPassword = crypto
       .createHash("sha256")
       .update(body.password)
