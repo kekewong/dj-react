@@ -19,6 +19,7 @@ import {
 import axios from 'axios'
 import React, { useState } from 'react'
 import { FieldValues, SubmitHandler, useForm } from 'react-hook-form'
+import { CreateUserRequestDto, userApiService } from 'src/services/api-services/userApiService'
 
 const AddUserPage = () => {
   const baseApiUrl = process.env.NEXT_PUBLIC_API_BASE_URL
@@ -37,9 +38,9 @@ const AddUserPage = () => {
     setShowPassword(!showPassword)
   }
 
-  const onSubmit = (data: FieldValues) => {
-    axios
-      .post(`${baseApiUrl}/user`, data)
+  const onSubmit = (data: CreateUserRequestDto) => {
+    userApiService
+      .create(data)
       .then(resp => {
         alert('Success')
       })
