@@ -11,6 +11,7 @@ import morgan from "morgan";
 import userRouter from "./src/routes/UserRoute";
 import authRouter from "./src/routes/AuthRoute";
 import { expressjwt, Request as JWTRequest } from "express-jwt";
+import cors from "cors";
 
 dotenv.config();
 
@@ -22,20 +23,24 @@ app.use(helmet());
 app.use(morgan("tiny"));
 
 //The default behavior of the module is to extract the JWT from the Authorization header as an Bearer Token
+// app.use(
+//   expressjwt({
+//     secret: privateKey,
+//     algorithms: ["HS256"],
+//   }).unless({ path: ["/api/login"] })
+// );
+// app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
+//   if (err.name === "UnauthorizedError") {
+//     res.status(401).send("Invalid token ");
+//   } else {
+//     next(err);
+//   }
+// });
 app.use(
-  expressjwt({
-    secret: privateKey,
-    algorithms: ["HS256"],
-  }).unless({ path: ["/api/login"] })
+  cors({
+    origin: ["https://localhost:3000", "http://localhost:3000"],
+  })
 );
-app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
-  if (err.name === "UnauthorizedError") {
-    res.status(401).send("Invalid token ");
-  } else {
-    next(err);
-  }
-});
-
 app.use("/api/users", userRouter);
 app.use("/api/login", authRouter);
 

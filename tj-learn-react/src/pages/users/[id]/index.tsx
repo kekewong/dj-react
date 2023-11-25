@@ -54,7 +54,7 @@ const UserDetailPage = () => {
 
   const onSubmit = (data: FieldValues) => {
     axios
-      .put(`${baseApiUrl}/user`, data)
+      .put(`${baseApiUrl}/users`, data)
       .then(resp => {
         alert('Success')
       })
@@ -70,7 +70,7 @@ const UserDetailPage = () => {
   useEffect(() => {
     if (!router.isReady) return
 
-    axios.get<UserData>(`${baseApiUrl}/user/${router.query.id}`).then(res => {
+    axios.get<UserData>(`${baseApiUrl}/users/${router.query.id}`).then(res => {
       reset(res.data)
       setIsActive(res.data.isActive)
     })
